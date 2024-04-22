@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="config.js"></script>
+<script src="func.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+<script src="https://unpkg.com/epubjs/dist/epub.min.js"></script>
+<link rel="stylesheet" href="styles.css">   
+</head>
+</div>
+<body>
+<div id="bookReaderModal" class="book-modal">
+    <div class="book-modal-content">
+        <span class="book-close" onclick="closeReader()">&times;</span>
+        <div id="bookViewer" class="book-viewer"></div>
+    </div>
+</div>    
+<div id="bookModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 id="modalBookTitle">Book Title</h1>
+      </div>
+      <div class="modal-body">
+        <p id="modalBookYear">Year</p>
+        <p id="modalBookOverview">Overview...</p>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+</div>
+<div class="grid" id="booksGrid">
+  <div class="card" onclick="playAlbum('0714cd8137d5c2bdcb38d8b0ae311630')">
+    <div class="image-container">
+      <img src="https://via.placeholder.com/150" alt="Book Cover" class="book-cover">
+      <img src="https://via.placeholder.com/150" alt="Book Cover Hover" class="book-cover-hover">
+    </div> 
+    <p>Loading</p>
+    <p>Loading...</p>
+    <button class="play-button"></button>
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', fetchAllBooks);
+
+</script>
+</body>
+</html>
